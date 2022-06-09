@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Padre from './hooks/Ejemplo3'
 import Ejemplo4 from './hooks/Ejemplo4';
@@ -10,12 +10,14 @@ import GreetingsStyles from './components/pure/GreetingsStyles';
 import Clock from './hooks/lifecycle/lifeCicle';
 
 import LifeCicleExcercise from './hooks/lifecycle/lifeCicleExcercise';
+import Father from './components/container/Father';
+import ComponentePadre from './Sesiones789/ComponentePadre';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         {/* <ComponentA/> */}
         {/* <Ejemplo1></Ejemplo1> */}
         {/* <Ejemplo2></Ejemplo2> */}
@@ -25,7 +27,9 @@ function App() {
         </Ejemplo4> */}
         {/* <TaskListComponent/> */}
         {/* <GreetingsStyles name="Ales"/> */}
-        <LifeCicleExcercise/>
+        {/* <LifeCicleExcercise/> */}
+        {/* <Father></Father> */}
+        <ComponentePadre/>
 
       </header>
     </div>
