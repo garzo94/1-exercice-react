@@ -12,6 +12,8 @@ import Clock from './hooks/lifecycle/lifeCicle';
 import LifeCicleExcercise from './hooks/lifecycle/lifeCicleExcercise';
 import Father from './components/container/Father';
 import ComponentePadre from './Sesiones789/ComponentePadre';
+import OptionalRender from './components/pure/OptionalRender';
+import Cuadrado from './Sesiones10-12/Ejercicio12RenderizadoCondicional';
 
 function App() {
   return (
@@ -29,7 +31,9 @@ function App() {
         {/* <GreetingsStyles name="Ales"/> */}
         {/* <LifeCicleExcercise/> */}
         {/* <Father></Father> */}
-        <ComponentePadre/>
+        {/* <ComponentePadre/> */}
+        {/* <OptionalRender></OptionalRender> */}
+        <Cuadrado></Cuadrado>
 
       </header>
     </div>
