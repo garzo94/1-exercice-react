@@ -6,11 +6,14 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import AppRoutingOne from './AppRoutingOne';
+import AppRoutingFinal from './AppRoutingFinal';
+import Routing161718 from './sesiones16-18/Routing161718';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+   <Routing161718></Routing161718>
   </React.StrictMode>
 );
 

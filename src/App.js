@@ -14,6 +14,9 @@ import Father from './components/container/Father';
 import ComponentePadre from './Sesiones789/ComponentePadre';
 import OptionalRender from './components/pure/OptionalRender';
 import Cuadrado from './Sesiones10-12/Ejercicio12RenderizadoCondicional';
+import LoginFormik from './components/pure/forms/LoginFormik';
+import RegisterFormik from './components/pure/forms/RegisterFormik';
+import FormikTask from './Sesiones131415/FormikTask';
 
 function App() {
   return (
@@ -27,13 +30,16 @@ function App() {
         {/* <Ejemplo4 nombre="Alex">
            <p>jeje</p>
         </Ejemplo4> */}
-        {/* <TaskListComponent/> */}
+        <TaskListComponent/>
         {/* <GreetingsStyles name="Ales"/> */}
         {/* <LifeCicleExcercise/> */}
         {/* <Father></Father> */}
         {/* <ComponentePadre/> */}
         {/* <OptionalRender></OptionalRender> */}
-        <Cuadrado></Cuadrado>
+        {/* <Cuadrado></Cuadrado> */}
+        {/* <LoginFormik></LoginFormik> */}
+        {/* <RegisterFormik></RegisterFormik> */}
+        {/* <FormikTask></FormikTask> */}
 
       </header>
     </div>

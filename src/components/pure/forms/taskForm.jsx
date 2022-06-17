@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {Levels} from '../../../models/Levels'
 import { Task } from '../../../models/task.class';
 
-export default function TaskForm({add}) {
+export default function TaskForm({add, length}) {
   console.log(Levels)
   const nameRef = useRef('');
   const descriptionRef = useRef('');
@@ -13,6 +13,12 @@ export default function TaskForm({add}) {
     e.preventDefault();
     const newTask = new Task(nameRef.current.value,descriptionRef.current.value, levelRef.current.value, false)
     add(newTask)
+  }
+
+
+  const normalStyle = {
+    color: 'blue',
+    fontWeight:'bold'
   }
 
   return (
@@ -33,7 +39,9 @@ export default function TaskForm({add}) {
                  Alto
               </option>
             </select>
-            <button type='submit' className='btn btn-succes btn-lg ms-2'>Add</button>
+            <button type='submit' className='btn btn-succes btn-lg ms-2'>
+              {length >0 ? 'Add more tasks': 'Add a new task'}
+              </button>
         </div>
 
     </form>
@@ -41,5 +49,6 @@ export default function TaskForm({add}) {
 }
 
 TaskForm.protoTypes = {
-  add: PropTypes.func.isRequired
+  add: PropTypes.func.isRequired,
+  length: PropTypes.number.isRequired
 }

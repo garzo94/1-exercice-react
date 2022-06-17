@@ -53,7 +53,7 @@ export default function TaskComponent({ task, completed, remove }) {
 
    
   return (
-    <tr className='fw-normal'>
+    <tr className='fw-normal' style={task.completed ? {color:'green' }: {color:'gray'}}>
       <th>
         <span className='ms-2'>{task.name}</span>
       </th>

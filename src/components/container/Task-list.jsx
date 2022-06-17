@@ -3,6 +3,7 @@ import {Task} from '../../models/task.class'
 
 import TaskComponent from '../pure/task'
 import TaskForm from '../pure/forms/taskForm'
+import FormikTask from '../../Sesiones131415/FormikTask'
 
 
 
@@ -35,7 +36,9 @@ export default function TaskListComponent() {
     //     console.log('TaskList va a desmontarce') 
     //   }
     // }, [task])
-    
+    setTimeout(()=>{
+     setloading(false)
+    },2000)
 
     function completeTask(task){
       
@@ -57,26 +60,16 @@ export default function TaskListComponent() {
     }
 
     function addTask(task){
-      const index = tasks.indexOf(task);
+      
       const tempTask = [...tasks];
       tempTask.push(task)
       settask(tempTask);
 
     }
-
-   
-  return (
-    <div className='col-12'>
-
-      <div className="card">
-        <div className='card-header p-3'>
-          <h5>
-              Your Task:
-          </h5>
-
-        </div>
-        <div className="card-body" data-mbd-perfect-scrollbar='true' style= {{position: 'relative', heigth:'400px'}}>
-          <table>
+  
+   const Table = () =>{
+    return(
+      <table>
             
               <thead>
                 <tr>
@@ -101,13 +94,30 @@ export default function TaskListComponent() {
               </tbody>
             
           </table>
+    )
+   }
+
+   
+  return (
+    <div className='col-12'>
+
+      <div className="card">
+        <div className='card-header p-3'>
+          <h5>
+              Your Task:
+          </h5>
+
+        </div>
+        <div className="card-body" data-mbd-perfect-scrollbar='true' style= {{position: 'relative', heigth:'400px'}}>
+        {  loading ? <h3>Loading..</h3> :(tasks.length>0?<Table></Table>:<p>No tasks yet</p>) }
         </div>
 
        
 
       </div>
 
-      <TaskForm add={addTask}/>
+      {/* <TaskForm add={addTask} length={tasks.length}/> */}
+      <FormikTask add={addTask}></FormikTask>
         
         {/* <TaskComponent task={defaultTask}></TaskComponent> */}
     </div>
