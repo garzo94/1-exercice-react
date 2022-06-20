@@ -1,0 +1,27 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    
+    align-items: center;
+    background-color: bisque;
+    color:brown;
+    width: 25rem;
+    height: 15rem;
+    border-radius: 15px;
+    
+}
+
+.btnNext{
+  margin: 50px;
+}
+
+.votes{
+    display:flex;
+    justify-content: space-around;
+    font-size: 30px;
+}
