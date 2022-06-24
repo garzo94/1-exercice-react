@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(110, 92, 32);
+}
+
+.completed {
+    color:green
+}
+.uncompleted {
+    
+    color:black;
+   
+    
+}
